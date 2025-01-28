@@ -7,15 +7,20 @@
 migrations/
 /_pycache_/
 env/
+venv/
+venv/Lib/
 env2/
 test.py
 # #untrack .env file
 .env
+.venv
 .vscode/
 *.pyc
 .idea
 openapi-schema.json
 logs/
 *.log
-
-
+*.py[cod]
+*$py.class
+venv/Lib/site-packages/
+**/site-packages/
