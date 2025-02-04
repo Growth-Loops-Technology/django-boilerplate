@@ -6,8 +6,9 @@
 # Node artifact files
 migrations/
 /_pycache_/
+*.pyc
 env/
-venv/
+venv
 venv/Lib/
 env2/
 test.py
@@ -24,3 +25,4 @@ logs/
 *$py.class
 venv/Lib/site-packages/
 **/site-packages/
+**/venv/*

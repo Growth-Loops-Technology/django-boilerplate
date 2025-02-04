@@ -1,12 +1,13 @@
 from rest_framework import serializers
 from .models import User
 
-class UserSerializer(serializers.ModelSerializer):
 
-    id = serializers.UUIDField(read_only=True)  
+class UserSerializer(serializers.ModelSerializer):
+    id = serializers.UUIDField(read_only=True)
     email = serializers.EmailField(help_text="User's email address")
     name = serializers.CharField(help_text="User's full name")
     password = serializers.CharField(help_text="User's password", write_only=True)
+
     class Meta:
         model = User
         fields = ['id', 'email', 'name', 'password']
@@ -24,3 +25,8 @@ class UserSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
+
+class UserResponseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'email', 'name']
